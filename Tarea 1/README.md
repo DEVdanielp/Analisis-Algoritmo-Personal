@@ -51,3 +51,11 @@ La decision greedy es asignarle al niño **menos codicioso** que aun no tiene ga
 **Por que funciona (y por que es greedy valido):**
 
 Si una galleta pequeña ya alcanza para satisfacer al niño menos exigente, usarla en un niño mas exigente no aporta nada (ese niño mas exigente de todas formas necesitaria una galleta igual o mas grande), y ademas le quitaria a otro niño la unica galleta que lo podia satisfacer. Por lo tanto, "gastar poco para satisfacer poco" nunca es una mala decision: libera las galletas grandes para los niños mas dificiles de contentar, maximizando el total de niños satisfechos. Ordenar ambos arreglos es lo que permite aplicar esta regla de forma directa con dos punteros, en O(n log n).
+
+## 3. Complejidades
+## Resumen
+
+| Ejercicio | Decision greedy | Por que es correcta | Complejidad tiempo | 
+|---|---|---|---|
+| Lemonade Change | Ante un billete de $20, preferir dar cambio con un $10 + un $5 en vez de tres $5 | El billete de $10 solo sirve para dar cambio de $20, mientras que el de $5 es mas flexible; conservarlo maximiza las opciones futuras | O(n) | 
+| Assign Cookies | Asignar al niño menos codicioso la galleta mas pequeña que ya lo satisface | Usar una galleta pequeña en un niño exigente no cambia su resultado pero le quita a otro niño su unica opcion; se maximiza el total de niños satisfechos | O(n log n + m log m) (dominada por el ordenamiento) | 
